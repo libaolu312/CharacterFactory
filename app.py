@@ -27,14 +27,14 @@ import importlib
 import time
 
 import os
-os.environ['GRADIO_TEMP_DIR'] = 'qinghewang/tmp'
+os.environ['GRADIO_TEMP_DIR'] = 'user/tmp'
 
 title = r"""
 <h1 align="center">CharacterFactory: Sampling Consistent Characters with GANs for Diffusion Models</h1>
 """
 
 description = r"""
-<b>Official Gradio demo</b> for <a href='https://qinghew.github.io/CharacterFactory/' target='_blank'><b>CharacterFactory: Sampling Consistent Characters with GANs for Diffusion Models</b></a>.<br>
+<b>CharacterFactory: Sampling Consistent Characters with GANs for Diffusion Models</b></a>.<br>
 
 How to use:<br>
 1. Enter prompts (the character placeholder is "a person"), where each line will generate an image.
@@ -42,26 +42,9 @@ How to use:<br>
 3. You can choose to use the Normal version (the gender is random), the Man version, and the Woman version.
 4. Click the <b>Generate</b> button to begin (Images are generated one by one).
 5. Our method can be applied to illustrating books and stories, creating brand ambassadors, developing presentations, art design, identity-consistent data construction and more. Looking forward to your explorations!😊
-6. If CharacterFactory is helpful, please help to ⭐ the <a href='https://github.com/qinghew/CharacterFactory' target='_blank'>Github Repo</a>. Thanks! 
 """
 
 article = r"""
----
-📝 **Citation**
-<br>
-If our work is helpful for your research or applications, please cite us via:
-```bibtex
-@article{wang2024characterfactory,
-title={CharacterFactory: Sampling Consistent Characters with GANs for Diffusion Models},
-author={Wang, Qinghe and Li, Baolu and Li, Xiaomin and Cao, Bing and Ma, Liqian and Lu, Huchuan and Jia, Xu},
-journal={arXiv preprint arXiv:2404.15677},
-year={2024}
-}
-```
-📧 **Contact**
-<br>
-If you have any questions, please feel free to open an issue or directly reach us out at <b>qinghewang@mail.dlut.edu.cn</b>.
-"""
 
 css = '''
 #color-bg{display:flex;justify-content: center;align-items: center;}
@@ -71,7 +54,7 @@ css = '''
 '''
 
 model_id = "stabilityai/stable-diffusion-2-1-base"
-# model_path = "/home/qinghewang/.cache/huggingface/hub/models--stabilityai--stable-diffusion-2-1/snapshots/5cae40e6a2745ae2b01ad92ae5043f95f23644d6"
+model_path = "/home/user/.cache/huggingface/hub/models--stabilityai--stable-diffusion-2-1/snapshots/5cae40e6a2745ae2b01ad92ae5043f95f23644d6"
 pipe = StableDiffusionPipeline.from_pretrained(model_id)   # , torch_dtype=torch.float16
 pipe.scheduler = DPMSolverMultistepScheduler.from_config(pipe.scheduler.config)
 pipe = pipe.to("cuda")
