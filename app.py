@@ -33,19 +33,6 @@ title = r"""
 <h1 align="center">CharacterFactory: Sampling Consistent Characters with GANs for Diffusion Models</h1>
 """
 
-description = r"""
-<b>CharacterFactory: Sampling Consistent Characters with GANs for Diffusion Models</b></a>.<br>
-
-How to use:<br>
-1. Enter prompts (the character placeholder is "a person"), where each line will generate an image.
-2. You can choose to create a new character or continue to use the current one. We have provided some examples, click on the examples below to use.
-3. You can choose to use the Normal version (the gender is random), the Man version, and the Woman version.
-4. Click the <b>Generate</b> button to begin (Images are generated one by one).
-5. Our method can be applied to illustrating books and stories, creating brand ambassadors, developing presentations, art design, identity-consistent data construction and more. Looking forward to your explorations!😊
-"""
-
-article = r"""
-
 css = '''
 #color-bg{display:flex;justify-content: center;align-items: center;}
 .color-bg-item{width: 100%; height: 32px}
